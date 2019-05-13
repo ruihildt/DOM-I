@@ -86,3 +86,17 @@ ctaH1.textContent = siteContent.cta["h1"]
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta["button"]
 
+// MAIN CONTENT
+
+// top-content
+const topContentH4 = document.querySelectorAll('.top-content h4');
+const topContentP = document.querySelectorAll('.top-content p');
+
+//Features
+topContentH4[0].textContent = siteContent["main-content"]['features-h4']
+topContentP[0].textContent = siteContent["main-content"]["features-content"]
+
+// About
+topContentH4[1].textContent = siteContent["main-content"]['about-h4']
+topContentP[1].textContent = siteContent["main-content"]["about-content"]
+
