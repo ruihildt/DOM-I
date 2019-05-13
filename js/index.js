@@ -100,3 +100,7 @@ topContentP[0].textContent = siteContent["main-content"]["features-content"]
 topContentH4[1].textContent = siteContent["main-content"]['about-h4']
 topContentP[1].textContent = siteContent["main-content"]["about-content"]
 
+// Middle Image
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
