@@ -56,3 +56,23 @@ navLinks[5].textContent = siteContent.nav["nav-item-6"];
 
 const logo = document.querySelector('#logo-img');
 logo.setAttribute('src', siteContent.nav["img-src"])
+
+/* Loop code provided in #help to research later 
+
+// Abrahart
+const navBar = document.querySelector('nav');
+const navLinks = navBar.querySelectorAll('a');
+const navObj = siteContent.nav;
+const navValues = Object.values(navObj);
+[...navLinks].forEach((link, index) => {
+  link.textContent = navValues[index];
+}); 
+
+// Vebras
+let nav = document.querySelectorAll("nav a");
+for (i = 0; i < nav.length; i++) {
+  nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+}
+
+*/
+
