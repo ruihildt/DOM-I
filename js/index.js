@@ -134,3 +134,18 @@ contactP[2].textContent = siteContent["contact"]["email"]
 const footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"]
 
+/*Task 3*/
+
+// Change nav links to green
+navLinks.forEach(a => a.style.color = "green");
+
+// Add 2 elements to nav
+const nav = document.getElementsByTagName('nav');
+
+const prependNavLink = document.createElement('a');
+prependNavLink.textContent = 'Social';
+nav[0].prepend(prependNavLink);
+
+const appendNavLink = document.createElement('a');
+appendNavLink.textContent = 'Last';
+nav[0].appendChild(appendNavLink);
