@@ -76,3 +76,13 @@ for (i = 0; i < nav.length; i++) {
 
 */
 
+// CTA
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent.cta["img-src"])
+
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent.cta["h1"]
+
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta["button"]
+
