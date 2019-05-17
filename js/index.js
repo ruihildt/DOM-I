@@ -38,5 +38,114 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+/* let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]) */
+
+
+/* Task 1 &  2 */
+
+//HEADER
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks[0].textContent = siteContent.nav["nav-item-1"]
+navLinks[1].textContent = siteContent.nav["nav-item-2"]
+navLinks[2].textContent = siteContent.nav["nav-item-3"]
+navLinks[3].textContent = siteContent.nav["nav-item-4"]
+navLinks[4].textContent = siteContent.nav["nav-item-5"]
+navLinks[5].textContent = siteContent.nav["nav-item-6"]
+
+const logo = document.querySelector("#logo-img");
+logo.setAttribute('src', siteContent.nav["img-src"])
+
+/* Loop code provided in #help to research later 
+
+// Abrahart
+const navBar = document.querySelector('nav');
+const navLinks = navBar.querySelectorAll('a');
+const navObj = siteContent.nav;
+const navValues = Object.values(navObj);
+[...navLinks].forEach((link, index) => {
+  link.textContent = navValues[index];
+}); 
+
+// Vebras
+let nav = document.querySelectorAll("nav a");
+for (i = 0; i < nav.length; i++) {
+  nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+}
+
+*/
+
+// CTA
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute('src', siteContent.cta["img-src"])
+
+const ctaH1 = document.querySelector(".cta-text h1");
+ctaH1.textContent = siteContent.cta["h1"]
+
+const ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent.cta["button"]
+
+
+// MAIN CONTENT
+
+// top-content
+const topContentH4 = document.querySelectorAll(".top-content h4");
+const topContentP = document.querySelectorAll(".top-content p");
+
+//Features
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"]
+topContentP[0].textContent = siteContent["main-content"]["features-content"]
+
+// About
+topContentH4[1].textContent = siteContent["main-content"]["about-h4"]
+topContentP[1].textContent = siteContent["main-content"]["about-content"]
+
+// Middle Image
+const middleImg = document.querySelector("#middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// bottom-content
+const bottomContentH4 = document.querySelectorAll(".bottom-content h4");
+const bottomContentP = document.querySelectorAll(".bottom-content p");
+
+//Services
+bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"]
+bottomContentP[0].textContent = siteContent["main-content"]["services-content"]
+
+// Product
+bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"]
+bottomContentP[1].textContent = siteContent["main-content"]["product-content"]
+
+// Vision
+bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"]
+bottomContentP[2].textContent = siteContent["main-content"]["vision-content"]
+
+// CONTACT
+const contactH4 = document.querySelectorAll(".contact h4");
+const contactP = document.querySelectorAll(".contact p");
+
+contactH4.textContent = siteContent["contact"]["contact-h4"]
+contactP[0].textContent = siteContent["contact"]["address"]
+contactP[1].textContent = siteContent["contact"]["phone"]
+contactP[2].textContent = siteContent["contact"]["email"]
+
+// FOOTER
+const footerP = document.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"]
+
+/*Task 3*/
+
+// Change nav links to green
+navLinks.forEach(a => a.style.color = "green");
+
+// Add 2 elements to nav
+const nav = document.getElementsByTagName('nav');
+
+const prependNavLink = document.createElement('a');
+prependNavLink.textContent = 'Social';
+nav[0].prepend(prependNavLink);
+
+const appendNavLink = document.createElement('a');
+appendNavLink.textContent = 'Last';
+nav[0].appendChild(appendNavLink);
